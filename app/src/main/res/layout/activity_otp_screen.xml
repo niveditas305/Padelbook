@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.OtpScreenActivity">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <com.chaos.view.PinView
+           android:id="@+id/otpView"
+           style="@style/PinWidget.PinView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:cursorVisible="true"
+           android:inputType="phone"
+           android:itemBackground="@drawable/rectangular_box"
+           android:textColor="@color/theme_blue"
+           android:textSize="18sp"
+           android:textStyle="bold"
+           android:state_selected="true"
+           android:fontFamily="@font/bold"
+           app:cursorColor="@color/theme_blue"
+           app:itemCount="6"
+           app:itemHeight="65dp"
+           app:itemRadius="3dp"
+           app:itemSpacing="8dp"
+           app:itemWidth="50dp"
+           app:lineColor="@drawable/otp_selector"
+           app:lineWidth="2dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="@dimen/_120sdp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:viewType="rectangle" />
+
+<!--       <in.aabhasjindal.otptextview.OtpTextView-->
+<!--           android:id="@+id/otpView"-->
+<!--           android:layout_width="wrap_content"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_centerHorizontal="true"-->
+<!--           android:layout_marginTop="@dimen/_120sdp"-->
+<!--           android:textColor="@color/theme_blue"-->
+<!--           app:bar_enabled="false"-->
+<!--           app:height="@dimen/_50sdp"-->
+<!--           app:bar_active_color="@color/theme_blue"-->
+<!--           app:layout_constraintEnd_toEndOf="parent"-->
+<!--           app:layout_constraintStart_toStartOf="parent"-->
+<!--           app:layout_constraintTop_toTopOf="parent"-->
+<!--           app:length="6"-->
+<!--           app:otp_box_background="@drawable/rectangular_box"-->
+<!--           app:otp_box_background_inactive="@drawable/rectangular_box"-->
+<!--           app:otp_box_background_active="@drawable/otp_boxactive"-->
+<!--           app:width="@dimen/_35sdp" />-->
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_horizontal"
+           android:orientation="vertical"
+           android:paddingHorizontal="@dimen/_12sdp"
+           android:paddingVertical="@dimen/_20sdp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
+
+           <ImageView
+               android:layout_width="@dimen/_120sdp"
+               android:layout_height="@dimen/_30sdp"
+               android:layout_marginBottom="@dimen/_5sdp"
+               android:src="@drawable/ic_logo" />
+
+           <TextView
+               style="@style/tvBold"
+               android:id="@+id/tvTimer"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center_horizontal"
+               android:text="@string/_1_17"
+               android:padding="@dimen/_5sdp"
+               android:textColor="@color/text_hint_color"
+               android:textSize="@dimen/_11ssp" />
+           <TextView
+               style="@style/tvBold"
+               android:id="@+id/getOtpOnEmailTextView"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center_horizontal"
+               android:visibility="gone"
+               android:padding="@dimen/_5sdp"
+               android:text="@string/get_otp_on_email"
+               android:textColor="@color/btn_clr_blue"
+               android:textSize="@dimen/_11ssp" />
+           <TextView
+               style="@style/tvBold"
+               android:id="@+id/tvResendOtp"
+               android:layout_gravity="center_horizontal"
+               android:gravity="center_horizontal"
+               android:visibility="gone"
+               android:text="@string/resend_otp"
+               android:padding="@dimen/_5sdp"
+               android:textColor="@color/btn_clr_blue"
+               android:textSize="@dimen/_11ssp" />
+       </LinearLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

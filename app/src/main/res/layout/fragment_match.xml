@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
+            android:id="@+id/main_single_row_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:longPress="false"
+            app:deselection="false"
+            android:layout_marginVertical="@dimen/_15sdp"
+            app:multiSelection="false" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvTitleTwo"
+                style="@style/tvBold"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:text="@string/menu_four"
+                android:textSize="@dimen/_11sdp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvTitleTwo"
+                android:background="@color/light_grey"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            tools:listitem="@layout/items_home_two_users"
+            android:paddingVertical="@dimen/_12sdp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+             android:id="@+id/llNoResultsFound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_results"/>
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/tvReg"
+                android:id="@+id/tvEmptyText"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:text="@string/no_public_matches_with_available_spots_found_book_a_court_or_start_a_public_match"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:textColor="@color/text_color"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/tvReg"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/text_color"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/no_result_text_second"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <TextView
+            style="@style/tvBold"
+            android:id="@+id/bottomText"
+            android:layout_marginVertical="@dimen/_13sdp"
+            android:drawableStart="@drawable/ic_group_322"
+            android:drawableTint="@color/theme_blue"
+            android:layout_gravity="center_horizontal"
+            android:drawablePadding="@dimen/_10sdp"
+            android:visibility="gone"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/start_a_match"
+            android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

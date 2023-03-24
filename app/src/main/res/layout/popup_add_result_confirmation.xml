@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_12sdp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="@dimen/_170sdp"
+            android:id="@+id/clTop">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/tvBold"
+                    android:id="@+id/tvTitle"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="@string/_16_10_21_30"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:textColor="@color/theme_blue"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    style="@style/tvBold"
+                    android:id="@+id/tvTitleTwo"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="invisible"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="@string/panda_padel_courts_12"
+                    android:textColor="@color/theme_blue"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imgFirstSec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circularImg"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/circularImgBorderOne"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@drawable/blue_circle"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <TextView
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_7sdp"
+                        android:text=""
+                        android:id="@+id/titlePop"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/theme_blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularImg"/>
+
+                    <TextView
+                        android:id="@+id/scorePop"
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_8sdp"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/join_time_clr"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titlePop"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgSecondSec"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/separator"
+                    app:layout_constraintStart_toEndOf="@+id/imgFirstSec"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circularImgTwo"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <ImageView
+                        android:id="@+id/circularImgBorderTwo"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@drawable/blue_circle"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_7sdp"
+                        android:text=""
+                        android:id="@+id/titleTwo"
+                        android:singleLine="true"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/theme_blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularImgTwo"/>
+
+                    <TextView
+                        android:id="@+id/scoreTwoPop"
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_8sdp"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/join_time_clr"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titleTwo"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgThirdSec"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="@+id/imgFirstSec"
+                    app:layout_constraintTop_toBottomOf="@+id/imgFirstSec">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circularImgThreePop"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/circularImgBorderThree"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@drawable/blue_circle"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <TextView
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_7sdp"
+                        android:text=""
+                        android:singleLine="true"
+                        android:id="@+id/titleThreePop"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/theme_blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularImgThreePop"/>
+
+                    <TextView
+                        android:id="@+id/scoreThreePop"
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_8sdp"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/join_time_clr"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titleThreePop"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgForthSec"
+                    android:layout_marginHorizontal="@dimen/_6sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/separator"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintStart_toEndOf="@+id/imgThirdSec"
+                    app:layout_constraintTop_toBottomOf="@+id/imgSecondSec">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circularImgFour"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <ImageView
+                        android:id="@+id/circularImgBorderFour"
+                        android:layout_width="@dimen/_33sdp"
+                        android:layout_height="@dimen/_33sdp"
+                        android:background="@drawable/blue_circle"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                    <TextView
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_7sdp"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:id="@+id/titleFourPop"
+                        android:singleLine="true"
+                        android:textColor="@color/theme_blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/circularImgFour"/>
+
+                    <TextView
+                        android:id="@+id/scoreFourPop"
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_8sdp"
+                        android:text=""
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/join_time_clr"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titleFourPop"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/separator"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/contact_clr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.441"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleTwo"
+                    app:layout_constraintStart_toEndOf="@+id/separator">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/teamF_winTag"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:src="@drawable/ic_group_414"/>
+
+                        <TextView
+                            android:id="@+id/teamOneFirst"
+                            style="@style/tvBold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_25sdp"
+                            android:text=""
+                            android:textColor="@color/theme_blue"/>
+
+                        <TextView
+                            android:id="@+id/teamTwoFirst"
+                            style="@style/tvBold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_25sdp"
+                            android:text=""
+                            android:textColor="@color/contact_clr"/>
+
+                        <TextView
+                            android:id="@+id/teamThreeFirst"
+                            style="@style/tvBold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_25sdp"
+                            android:text=""
+                            android:textColor="@color/theme_blue"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/contact_clr"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/teamS_winTag"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_weight="1"
+                            android:visibility="invisible"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:src="@drawable/ic_group_414"/>
+
+                        <TextView
+                            android:id="@+id/teamOneSecond"
+                            style="@style/tvBold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_25sdp"
+                            android:text=""
+                            android:textColor="@color/contact_clr"/>
+
+                        <TextView
+                            android:id="@+id/teamTwoSecond"
+                            style="@style/tvBold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_25sdp"
+                            android:text=""
+                            android:textColor="@color/theme_blue"/>
+
+                        <TextView
+                            android:id="@+id/teamThreeSecond"
+                            style="@style/tvBold"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_25sdp"
+                            android:text=""
+                            android:textColor="@color/contact_clr"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            style="@style/tvBold"
+            android:layout_width="wrap_content"
+            android:text="@string/add_result_titlte"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_20sdp"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:textSize="@dimen/_13sdp"/>
+
+
+        <TextView
+            android:id="@+id/tvDes"
+            style="@style/tvBold"
+            android:text="@string/addResult_description"
+            android:gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:textColor="@color/text_hint_color"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:textSize="@dimen/_11ssp"/>
+
+        <LinearLayout
+            android:id="@+id/buttonScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tvResults"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+                android:backgroundTint="@color/btn_clr_blue"
+                android:background="@drawable/blue_rect"
+                android:text="@string/result_button"
+                android:layout_marginEnd="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@+id/rbTerms" />
+
+            <TextView
+                android:id="@+id/imgCard"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp"
+                android:text="Όχι"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/red_color"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@drawable/blue_rect"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

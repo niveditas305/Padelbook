@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:id="@+id/clHeader"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:paddingVertical="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_15sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:gravity="left"
+            android:id="@+id/ivBack"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            style="@style/tvBold"
+            android:text="Credit Cards"
+            android:id="@+id/tvTitleToolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivBack" />
+
+        <View
+            android:id="@+id/separatorToolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/light_grey"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvTitleToolbar"
+            android:layout_height="@dimen/_1sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+     <TextView
+         android:id="@+id/tvMyCards"
+         android:layout_width="match_parent"
+         style="@style/tvBold"
+         android:layout_below="@+id/clHeader"
+         android:textColor="@color/text_blue_color"
+         android:background="@color/text_back"
+         android:textSize="@dimen/_11sdp"
+         android:padding="@dimen/_12sdp"
+         android:text="My Cards"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvAddCard"
+        android:layout_below="@+id/tvMyCards">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvAddCard"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:background="@drawable/round_corner_blue"
+        android:text="Add Card" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.IntroScreenActivity">
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/introSliderViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/bottomLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicatorContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_50sdp"
+            app:ci_drawable="@drawable/dot"
+            app:ci_drawable_unselected="@drawable/dot_inactive"
+            app:ci_gravity="center"
+            app:ci_height="5dp"
+            app:ci_margin="5dp"
+            app:ci_orientation="horizontal"
+            app:ci_width="5dp" />
+
+
+        <TextView
+            android:id="@+id/buttonNext"
+            style="@style/tvReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_corner_intro_btn"
+            android:backgroundTint="#5269EE"
+            android:fontFamily="@font/med"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/screen_four_button_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

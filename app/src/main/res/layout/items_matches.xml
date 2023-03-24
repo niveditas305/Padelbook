@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_70sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgSecondSec"
+        android:layout_marginEnd="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgTwo"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+
+            android:background="@drawable/stroke_circular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgTwo"
+            app:layout_constraintStart_toStartOf="@+id/circularImgTwo"
+            app:layout_constraintBottom_toBottomOf="@+id/circularImgTwo"
+            app:layout_constraintTop_toTopOf="@+id/circularImgTwo"/>
+
+        <TextView
+            style="@style/tvBold"
+            android:textSize="@dimen/_8sdp"
+            android:layout_width="@dimen/_60sdp"
+
+            android:id="@+id/titleTwo"
+            android:gravity="center"
+            android:layout_height="@dimen/_30sdp"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circularImgTwo"/>
+
+        <TextView
+            android:id="@+id/tvScore"
+            style="@style/tvBold"
+            android:textSize="@dimen/_9sdp"
+
+            android:gravity="center_horizontal"
+            android:textColor="@color/join_time_clr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTwo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

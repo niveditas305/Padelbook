@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include android:id="@+id/toolbarId"
+        layout="@layout/toolbar"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/EditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:id="@+id/edEmail"
+        android:visibility="gone"
+        android:layout_below="@+id/toolbarId"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+        android:layout_height="wrap_content"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:textColor="@color/theme_blue"
+            android:singleLine="true"
+            android:id="@+id/etEmail"
+            android:textSize="@dimen/_10ssp"
+            android:inputType="textEmailAddress"
+            android:textAppearance="@style/AppTheme.InputLayoutStyle"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/toolbarId"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        style="@style/EditText.OutlinedBox"
+        android:id="@+id/edMobile"
+        android:visibility="v"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+        android:hint="@string/mobile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:textColor="@color/theme_blue"
+            android:textSize="@dimen/_10ssp"
+            android:maxLength="14"
+            android:inputType="phone"
+            android:textAppearance="@style/AppTheme.InputLayoutStyle"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/llMobile"
+        android:layout_below="@+id/toolbarId"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:gravity="center"
+         style="@style/EditText.OutlinedBox"
+        android:background="@drawable/rect_edit_border"
+         android:layout_height="wrap_content">
+        <com.rilixtech.CountryCodePicker
+            android:id="@+id/ccp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/_10sdp"
+            app:ccp_hideNameCode="true"
+            app:ccp_showFlag="false"
+            app:ccp_showFullName="false"
+            app:ccp_textColor="@color/theme_blue"
+            app:ccp_textSize="@dimen/_10ssp" />
+
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:digits="1234567890"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_5sdp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/ccp"
+            android:inputType="phone"
+            android:maxLength="14"
+            android:hint="Mobile"
+            android:textCursorDrawable="@null"
+            android:paddingVertical="@dimen/_15sdp"
+            android:textAppearance="@style/AppTheme.InputLayoutStyle"
+            android:textColor="@color/theme_blue"
+            android:textColorHint="@color/dark_color_two"
+            android:textSize="@dimen/_10ssp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_18sdp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/round_corner_blue"
+        android:text="@string/but_email" />
+
+    <TextView
+        android:id="@+id/tvTimerButton"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_18sdp"
+        android:background="@drawable/round_corner_blue"
+        android:text="@string/email_submit" />
+    <TextView
+        android:id="@+id/tvResendOtpBtn"
+        style="@style/buttonStyle"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_18sdp"
+        android:background="@drawable/round_corner_blue"
+        android:text="@string/resend_otp" />
+
+</RelativeLayout>

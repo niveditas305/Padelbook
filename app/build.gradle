@@ -1,0 +1,157 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'  // Google Services plugin
+    id 'com.google.firebase.crashlytics'
+}
+
+
+android {
+
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "snow.app.padelbook"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.leanback:leanback:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.coordinatorlayout:coordinatorlayout:1.1.0"
+
+    //sdp and ssp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    //arc progress bar
+    implementation 'com.github.lzyzsd:circleprogress:1.1.0@aar'
+
+    //circular image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // calender view
+   // implementation 'devs.mulham.horizontalcalendar:horizontalcalendar:1.3.4'
+
+    implementation 'com.michalsvec:single-row-calednar:1.0.0'
+
+
+    // ratingBar
+    implementation 'com.github.fuzz-productions:RatingBar:1.0.6'
+
+    // lottie animation
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+    //tag view
+    implementation 'com.google.android:flexbox:2.0.1'
+
+    // dot indicator
+    implementation 'com.tbuonomo:dotsindicator:4.2'
+
+    //map view
+    implementation 'com.google.android.gms:play-services-maps:18.0.0'
+
+    //view pager indicator
+    implementation 'me.relex:circleindicator:2.1.6'
+
+
+    //pin view otp
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
+
+    // glidec
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    // power spinner
+    implementation "com.github.skydoves:powerspinner:1.1.9"
+
+    // places library
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation "androidx.activity:activity-ktx:1.2.3"
+    implementation "androidx.fragment:fragment-ktx:1.3.3"
+
+    // time picker
+    // implementation 'com.github.florent37:singledateandtimepicker:2.2.7'
+    implementation 'com.github.OzcanAlasalvar:DatePicker:1.0.4'
+
+    //LifeCycle
+    implementation 'androidx.lifecycle:lifecycle-common:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+
+    //firebase
+   // implementation 'com.google.firebase:firebase-analytics:17.5.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
+
+    implementation platform('com.google.firebase:firebase-bom:29.0.4')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+
+    // facebook
+    implementation 'com.facebook.android:facebook-android-sdk:5.+'
+    implementation 'com.owen:tv-recyclerview:3.0.0'
+
+    implementation "io.github.minyushov:wheel-picker:1.0.0"
+
+    // recycle enhanced
+    implementation 'com.nikhilpanju.recyclerviewenhanced:recyclerviewenhanced:1.1.0'
+
+    // stripe
+    implementation 'com.stripe:stripe-android:19.2.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    //ccp
+    implementation 'com.github.joielechong:countrycodepicker:2.3.0'
+    implementation 'com.github.tobiasschuerg:android-prefix-suffix-edit-text:1.3.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //image croper
+    implementation 'com.github.dhaval2404:imagepicker:1.7.5'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_24sdp"
+                     android:layout_height="?actionBarSize">
+
+                    <ImageView
+                        android:id="@+id/imgBackBut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_back"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+                <!-- <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                     android:id="@+id/dots_indicator"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     app:dotsColor="@color/theme_blue"
+                     app:dotsStrokeColor="@color/white"
+                     app:dotsCornerRadius="8dp"
+                     app:dotsSize="8dp"
+                     app:dotsSpacing="4dp"
+                     android:layout_marginBottom="@dimen/_10sdp"
+                     app:dotsStrokeWidth="1dp"
+                     android:layout_centerHorizontal="true"
+                     android:layout_alignBottom="@+id/viewPager"/>-->
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_15ssp"
+                    android:layout_alignBottom="@+id/viewPager"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:orientation="horizontal"
+                    app:ci_drawable="@drawable/ic_group_336"
+                    app:ci_drawable_unselected="@drawable/ic_dot_lightgrey"
+                    app:ci_height="8dp"
+                    app:ci_width="8dp" />
+
+
+                <TextView
+                    android:id="@+id/tvTitleTwo"
+                    style="@style/tvBold"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/viewPager"
+                    android:layout_gravity="left"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingStart="@dimen/_18sdp"
+                     android:textFontWeight="700"
+                    android:textSize="@dimen/_17sdp" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/tvTitleTwo"
+                    android:background="@color/white"
+                    android:clipToPadding="false"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/theme_blue"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMaxWidth="0dp"
+                    app:tabPaddingEnd="@dimen/_14sdp"
+                    app:tabPaddingStart="@dimen/_14sdp"
+                    app:tabSelectedTextColor="@color/theme_blue"
+                    app:tabTextAppearance="@style/CustomTabTwo"
+                    app:tabTextColor="@color/text_hint_color">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="@string/menu_three" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="@string/menu_four" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:text="@string/profile" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <FrameLayout
+            android:id="@+id/frameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topCard"
+            android:paddingBottom="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:paddingHorizontal="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_back"
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    style="@style/tvBold"
+                    android:text="@string/padel_court_heading"
+                    android:layout_marginStart="@dimen/_10sdp"/>
+
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                     android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_height="@dimen/_1sdp"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:editable="false"
+                android:background="@drawable/rectangular_box"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:drawableEnd="@drawable/ic_group_245"
+                android:drawableTint="@color/dark_color"
+                android:fontFamily="@font/reg"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:hint="@string/serach_area"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <TextView
+                style="@style/tvBold"
+                android:id="@+id/tvToggle"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:text="@string/recent_search"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <View
+                android:id="@+id/separator"
+                android:background="@color/light_grey"
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvToggle"
+                android:layout_height="@dimen/_1sdp"/>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:listitem="@layout/items_locations"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/toolbarId"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/toolbar"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarId"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/white"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        android:overScrollMode="never"
+         android:layout_marginTop="@dimen/_10sdp"
+        app:tabIndicatorColor="@color/theme_blue"
+        app:tabSelectedTextColor="@color/theme_blue"
+        app:tabTextAppearance="@style/CustomTabTwo"
+        app:tabTextColor="@color/text_hint_color">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="@string/bookin_head1" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/booking_head2" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/booking_head3" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/booking_head4" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:background="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        android:layout_height="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleBooking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_12sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/llNoResultsFound"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        android:layout_height="0dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_results"/>
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/tvReg"
+            android:id="@+id/tvEmptyText"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/tvReg"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/no_result_text_second"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

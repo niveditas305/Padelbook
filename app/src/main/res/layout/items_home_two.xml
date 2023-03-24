@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/_10sdp"
+    app:cardElevation="0dp"
+    android:elevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/rect_box_blue"
+        android:layout_height="wrap_content"
+        android:id="@+id/clTop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingHorizontal="@dimen/_12sdp">
+
+        <TextView
+             style="@style/tvBold"
+             android:id="@+id/tvTitle"
+             android:textSize="@dimen/_10sdp"
+
+             android:textColor="@color/theme_blue"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/subHeading"
+            style="@style/regTextview"
+
+            android:textColor="@color/theme_blue"
+            android:textSize="@dimen/_7sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+        style="@style/regTextview"
+        android:textSize="@dimen/_7sdp"
+        android:id="@+id/subHeadingTwo"
+        android:text="@string/selector_text"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:textColor="@color/theme_blue"
+        app:layout_constraintEnd_toStartOf="@+id/radioBut"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"/>
+
+    <ImageView
+        android:id="@+id/radioBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:clickable="false"
+        android:focusable="false"
+        android:src="@drawable/ic_radio_unselected"
+        android:enabled="false"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/userSect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/items_matches"
+                android:orientation="horizontal"
+                tools:itemCount="4"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioBut" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imgFirstSec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioBut">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImg"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="1.5dp"
+            android:layout_marginStart="9.5dp"
+            android:background="@drawable/stroke_circular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/circularImgBorder"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="9.5dp"
+           android:visibility="gone"
+
+            android:background="@drawable/blue_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageWhiteOne"
+            android:layout_width="@dimen/_39sdp"
+            android:layout_height="@dimen/_39sdp"
+            android:layout_marginTop="6.5dp"
+
+            android:src="@color/whiteTwo"
+            android:visibility="gone"
+            android:layout_marginStart="10.5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container22"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="9.5dp"
+            android:background="@drawable/stroke_circular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+
+                android:src="@color/whiteTwo"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <ImageView
+            android:id="@+id/lockImgFirst"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_lock"
+android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/circularImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/plusIconFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="@+id/circularImg"
+            app:layout_constraintStart_toStartOf="@+id/circularImg"
+            app:layout_constraintBottom_toBottomOf="@+id/circularImg"
+            app:layout_constraintTop_toTopOf="@+id/circularImg"/>
+
+        <TextView
+            style="@style/tvBold"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center_horizontal"
+            android:layout_width="@dimen/_60sdp"
+            android:text=""
+            android:id="@+id/title"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circularImg"/>
+
+        <TextView
+            android:id="@+id/scoreOne"
+            style="@style/tvBold"
+            android:textSize="@dimen/_9sdp"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:textColor="@color/join_time_clr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgSecondSec"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:layout_constraintEnd_toStartOf="@+id/separator"
+        app:layout_constraintStart_toEndOf="@+id/imgFirstSec"
+        app:layout_constraintTop_toBottomOf="@+id/radioBut">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgTwo"
+            android:layout_width="@dimen/_40sdp"
+
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/stroke_circular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/circularImgTwoBorderTwo"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+             android:visibility="gone"
+            android:background="@drawable/blue_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageWhiteTwo"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@color/whiteTwo"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/lockImgTwo"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_lock"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgTwo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/plusIconSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgTwo"
+            app:layout_constraintStart_toStartOf="@+id/circularImgTwo"
+            app:layout_constraintBottom_toBottomOf="@+id/circularImgTwo"
+            app:layout_constraintTop_toTopOf="@+id/circularImgTwo"/>
+
+        <TextView
+            style="@style/tvBold"
+            android:textSize="@dimen/_8sdp"
+            android:layout_width="@dimen/_60sdp"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:id="@+id/titleTwo"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circularImgTwo"/>
+
+        <TextView
+            android:id="@+id/scoreTwo"
+            style="@style/tvBold"
+            android:textSize="@dimen/_9sdp"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:textColor="@color/join_time_clr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTwo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_gravity="center_vertical"
+        android:background="@color/join_time_clr"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="@+id/imgSecondSec"
+         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="@dimen/_38sdp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgThirdSec"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@+id/separator"
+        app:layout_constraintTop_toBottomOf="@+id/radioBut">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgThree"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/stroke_circular"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/circularImgThreeBorder"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/blue_circle"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageWhiteThree"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@color/whiteTwo"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/lockImgThree"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_lock"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgThree"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/plusIconThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgThree"
+            app:layout_constraintStart_toStartOf="@+id/circularImgThree"
+            app:layout_constraintBottom_toBottomOf="@+id/circularImgThree"
+            app:layout_constraintTop_toTopOf="@+id/circularImgThree"/>
+
+        <TextView
+            style="@style/tvBold"
+            android:textSize="@dimen/_8sdp"
+            android:layout_width="@dimen/_60sdp"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:id="@+id/titleThree"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circularImgThree"/>
+
+        <TextView
+            android:id="@+id/scoreThree"
+            style="@style/tvBold"
+            android:textSize="@dimen/_9sdp"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:textColor="@color/join_time_clr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleThree"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgForthSec"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgThirdSec"
+        app:layout_constraintTop_toBottomOf="@+id/radioBut">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularImgFour"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/stroke_circular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/circularImgFourBorder"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            android:background="@drawable/blue_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageWhiteFour"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@color/whiteTwo"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/lockImgFour"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_lock"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgFour"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/plusIconForth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintEnd_toEndOf="@+id/circularImgFour"
+            app:layout_constraintStart_toStartOf="@+id/circularImgFour"
+            app:layout_constraintBottom_toBottomOf="@+id/circularImgFour"
+            app:layout_constraintTop_toTopOf="@+id/circularImgFour"/>
+
+        <TextView
+            style="@style/tvBold"
+            android:textSize="@dimen/_8sdp"
+            android:layout_width="@dimen/_60sdp"
+            android:text=""
+            android:gravity="center_horizontal"
+            android:id="@+id/titleFour"
+            android:textColor="@color/theme_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circularImgFour"/>
+        <TextView
+            android:id="@+id/scoreFour"
+            style="@style/tvBold"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/join_time_clr"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleFour"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_12sdp"
+            android:id="@+id/viewLAts"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/imgForthSec"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:background="@color/btn_darkBlue"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

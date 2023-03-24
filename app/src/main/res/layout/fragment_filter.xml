@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--<data>
+
+    <import type="android.view.View" />
+        &lt;!&ndash;
+        <variable
+            name="viewModel"
+            type="snow.app.athlesisplus.viewmodel.HomeGymFragmentVm" />&ndash;&gt;
+    </data>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".fragments.FilterFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_40sdp">
+
+                <LinearLayout
+                    android:id="@+id/topSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvSortingHeading"
+                        style="@style/tvBold"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/sorting"
+                        android:textSize="@dimen/_12ssp"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llSorting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:weightSum="2"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSortingHeading">
+
+
+                        <TextView
+                            android:id="@+id/tvSortinOne"
+                            style="@style/tvReg"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                             android:background="@drawable/rectangular_box"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_6sdp"
+                            android:text="@string/price"
+                            android:textSize="@dimen/_11ssp"
+                            android:textColor="@color/dark_color"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvSortingTwo"
+                            style="@style/tvReg"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_11ssp"
+                            android:background="@drawable/rectangular_box"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_6sdp"
+                            android:text="@string/distance"
+                            android:textColor="@color/dark_color"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvSortinThree"
+                            style="@style/tvReg"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/rectangular_box"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_6sdp"
+                            android:textSize="@dimen/_11ssp"
+                            android:text="@string/rating"
+                            android:textColor="@color/dark_color"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/newSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/llSorting">
+
+                        <TextView
+                            android:id="@+id/tvGenderHeading"
+                            style="@style/tvBold"
+                            android:fontFamily="@font/bold"
+                            android:text="@string/category"
+
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/dark_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:weightSum="2"
+                            app:layout_constraintTop_toBottomOf="@+id/tvGenderHeading">
+
+                            <TextView
+                                android:id="@+id/tvMale"
+                                style="@style/tvReg"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:textSize="@dimen/_11ssp"
+                                android:background="@drawable/rectangular_box"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/_6sdp"
+                                android:text="@string/men"
+                                android:textColor="@color/dark_color"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvFemale"
+                                style="@style/tvReg"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangular_box"
+                                android:gravity="center"
+                                android:paddingVertical="@dimen/_6sdp"
+                                android:text="@string/women"
+                                android:textSize="@dimen/_11ssp"
+                                android:textColor="@color/dark_color"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvMixed"
+                                style="@style/tvReg"
+                                android:layout_width="0dp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangular_box"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:paddingVertical="@dimen/_6sdp"
+                                android:text="@string/mixed"
+                                android:textColor="@color/dark_color"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvLevelHeading"
+                            style="@style/tvBold"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:textSize="@dimen/_12ssp"
+                            android:fontFamily="@font/bold"
+                            android:text="@string/level"
+                            android:textColor="@color/dark_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/llGender" />
+
+                        <LinearLayout
+                            android:id="@+id/llLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+
+                            app:layout_constraintTop_toBottomOf="@+id/tvLevelHeading">
+
+                            <TextView
+                                android:id="@+id/tvAllLevel"
+                                style="@style/tvReg"
+                                android:layout_width="0dp"
+                                android:textSize="@dimen/_11ssp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:background="@drawable/rectangular_box"
+                                android:gravity="center"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_6sdp"
+                                android:text="@string/all_level"
+                                android:textColor="@color/dark_color"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvMyLevel"
+                                style="@style/tvReg"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangular_box"
+                                android:gravity="center"
+                                android:textSize="@dimen/_11ssp"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:paddingVertical="@dimen/_6sdp"
+                                android:text="@string/my_level"
+                                android:textColor="@color/dark_color"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvDistanceVal"
+                        style="@style/tvBold"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/distance_in_km"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/newSection" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSeekbarLabel"
+                    style="@style/tvReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:text="@string/seekbarlabel"
+                    android:textColor="@color/dark_color"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/topSection" />
+
+                <RelativeLayout
+                    android:id="@+id/rlseekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSeekbarLabel">
+
+                    <View
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="3dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="19.5dp"
+                        android:background="@color/light_grey"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="19.5dp"
+                        android:background="@color/theme_blue"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="4"
+                        android:paddingVertical="8dp"
+                        android:progressBackgroundTint="@color/light_grey"
+                        android:progressDrawable="@drawable/seekbar_track"
+                        android:progressTint="@color/theme_blue"
+                        android:thumb="@drawable/round_dot"
+                        android:tickMark="@drawable/iv_tick" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLabels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/rlseekbar">
+
+                    <TextView
+                        android:id="@+id/labelFirst"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="3"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/dark_color"
+                        />
+
+                    <TextView
+                        android:id="@+id/labelSecond"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="7"
+                        android:textColor="@color/dark_color"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/labelThird"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="15"
+                        android:textColor="@color/dark_color"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/labelForth"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="20"
+                        android:textColor="@color/dark_color"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/labelFivth"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/all"
+                        android:textColor="@color/dark_color"
+                        android:textSize="@dimen/_11ssp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    style="@style/tvBold"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/duration"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/dark_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llLabels" />
+
+                <LinearLayout
+                    android:id="@+id/llDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDuration">
+
+                    <TextView
+                        android:id="@+id/tvDurationOne"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_11ssp"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/_60_min"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDurationTwo"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_11ssp"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/_90_min"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvDurationthree"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_11ssp"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/_120_min"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvCourtType"
+                    style="@style/tvBold"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/court_type"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/dark_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llDuration" />
+
+                <LinearLayout
+                    android:id="@+id/llCourtType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:weightSum="3"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCourtType">
+
+                    <TextView
+                        android:id="@+id/tvCourtTone"
+                        style="@style/tvReg"
+                        android:textSize="@dimen/_11ssp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/open"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCourtTTwo"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/roofed"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCourtTthree"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_11ssp"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/indoors"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCourtSize"
+                    style="@style/tvBold"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/bold"
+                    android:text="@string/court_size"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/dark_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llCourtType" />
+
+                <LinearLayout
+                    android:id="@+id/llCourtSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/tvCourtSize">
+
+                    <TextView
+                        android:id="@+id/tvCourtSizeOne"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:textSize="@dimen/_11ssp"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/full_size"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCourtSizeTwo"
+                        style="@style/tvReg"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_11ssp"
+                        android:background="@drawable/rectangular_box"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_6sdp"
+                        android:text="@string/single"
+                        android:textColor="@color/dark_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    style="@style/buttonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:background="@drawable/round_corner_blue"
+                    android:text="@string/view_16_results"
+                    app:layout_constraintTop_toBottomOf="@+id/llCourtSize" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>

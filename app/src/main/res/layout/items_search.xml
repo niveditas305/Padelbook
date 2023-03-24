@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rect_box_grey"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_15sdp"
+    android:id="@+id/clParent"
+    android:layout_marginBottom="@dimen/_15sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/viewData"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/_280sdp"
+       android:layout_height="@dimen/_180sdp"/>
+
+    <TextView
+        style="@style/tvBold"
+        android:id="@+id/title"
+        android:textSize="@dimen/_13sdp"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="@dimen/_2sdp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="@dimen/_15sdp"/>
+
+    <TextView
+        style="@style/tvBold"
+        android:id="@+id/subHeading"
+        android:textSize="@dimen/_9sdp"
+        android:layout_gravity="center"
+        android:lineSpacingExtra="@dimen/_2sdp"
+        android:textColor="@color/dark_color"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="@dimen/_15sdp"/>
+
+    <ImageView
+        android:id="@+id/imageLike"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_heart_img"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/imageData"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/subHeading"
+      />
+
+    <LinearLayout
+        android:id="@+id/textSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@+id/imageData"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/items_time_slot"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvNoAvailability"
+        style="@style/tvBold"
+        android:textSize="@dimen/_11ssp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:lineSpacingExtra="@dimen/_2sdp"
+        android:textColor="@color/dark_color"
+        android:paddingVertical="@dimen/_8sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:drawableStart="@drawable/ic_info"
+        app:layout_constraintTop_toBottomOf="@+id/textSection"
+        android:text="@string/no_availability_at_this_time"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="@dimen/_15sdp"/>
+    <View
+        android:id="@+id/separtor"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNoAvailability"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_height="@dimen/_1sdp"/>
+
+      <LinearLayout
+          app:layout_constraintTop_toBottomOf="@+id/separtor"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingHorizontal="@dimen/_15sdp"
+          android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/tvRating"
+              style="@style/tvBold"
+              android:textSize="@dimen/_9sdp"
+              android:layout_gravity="center"
+              android:lineSpacingExtra="@dimen/_2sdp"
+              android:textColor="@color/dark_color"
+              app:layout_constraintTop_toBottomOf="@+id/title"
+               app:layout_constraintStart_toStartOf="parent"
+              android:paddingHorizontal="@dimen/_3sdp"/>
+
+          <TextView
+              style="@style/tvBold"
+              android:textSize="@dimen/_9sdp"
+              android:layout_gravity="center"
+              android:lineSpacingExtra="@dimen/_2sdp"
+              android:textColor="@color/dark_color"
+              app:layout_constraintTop_toBottomOf="@+id/title"
+              android:text="@string/ratings"
+              app:layout_constraintStart_toStartOf="parent"
+              android:paddingHorizontal="@dimen/_3sdp"/>
+
+          <com.fuzzproductions.ratingbar.RatingBar
+              android:id="@+id/ratingBar"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_10sdp"
+              android:layout_marginTop="@dimen/_2sdp"
+              android:layout_marginStart="@dimen/_2sdp"
+              app:isIndicator="true"
+              app:numStars="5"
+              app:starSize="@dimen/_10sdp"
+              app:starSpacing="@dimen/_2sdp"
+              app:filledDrawable="@drawable/ic_rating_fill"
+              app:emptyDrawable="@drawable/ic_rating_unfill"
+              />
+
+      </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPricePerPerson"
+        style="@style/tvBold"
+        android:textSize="@dimen/_9sdp"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/dark_color"
+        app:layout_constraintTop_toBottomOf="@+id/separtor"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_15sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

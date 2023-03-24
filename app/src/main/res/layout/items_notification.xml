@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="@dimen/_12sdp"
+    android:paddingVertical="@dimen/_14sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/dp"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_42sdp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_toEndOf="@+id/dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/reg"
+            android:textColor="@color/dark_color"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            style="@style/tvBold"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text=""
+            android:textColor="@color/dark_color"
+            android:textSize="@dimen/_8sdp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#536aef"
+        android:paddingTop="@dimen/_20sdp"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent"
+       >
+
+        <ImageView
+            android:id="@+id/topImg"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_300sdp"
+             android:src="@drawable/img_th"
+            android:paddingLeft="-20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/rightImg"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginRight="-60dp"
+            android:src="@drawable/ic_square_square"
+            app:layout_constraintTop_toBottomOf="@+id/topImg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+             />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/tvReg"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/bold"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="@string/screen_three_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topImg" />
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            style="@style/tvReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/med"
+            android:text="@string/screen_three_sub_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

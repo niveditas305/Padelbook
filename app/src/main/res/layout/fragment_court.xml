@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.michalsvec.singlerowcalendar.calendar.SingleRowCalendar
+            android:id="@+id/main_single_row_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_marginTop="16dp"
+
+            app:deselection="false"
+            app:longPress="false"
+            app:multiSelection="false" />
+
+        <RelativeLayout
+            android:id="@+id/recycleTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_single_row_calendar">
+
+            <TextView
+                android:id="@+id/tvNoAvailability"
+                style="@style/tvBold"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:paddingVertical="@dimen/_40sdp"
+                android:text="@string/no_availability_please_select_new_date"
+                android:textColor="@color/dark_color_two"
+                android:textSize="@dimen/_11ssp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/items_time_slot" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/headingAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycleTimeLayout"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTitleTwo"
+                style="@style/tvBold"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:text="@string/availability"
+                android:textSize="@dimen/_11sdp" />
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvTitleTwo"
+                android:background="@color/light_grey"
+                app:layout_constraintTop_toTopOf="parent" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headingAvailable">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_12sdp"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/items_available" />
+
+            <View
+                android:id="@+id/recycleAvailableView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@+id/recycleAvailable"
+                android:background="@color/light_grey"
+                android:paddingBottom="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/popupSubmit"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/recycleAvailableView"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:background="@drawable/round_corner_grey"
+                android:enabled="false"
+                android:text="@string/book_now" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbText"
+            style="@style/radioButtoStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="@string/pay_your_part"
+            android:textColor="@color/theme_blue"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:paddingHorizontal="@dimen/_8sdp"
+            app:layout_constraintEnd_toStartOf="@+id/clubPassTextview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            style="@style/tvBold"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+             android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/clubPassTextview"
+            style="@style/tvBold"
+            android:text="@string/active_pass"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/theme_blue"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:paddingVertical="@dimen/_2sdp"
+            android:background="@drawable/round_corner_blue_solid"
+             android:paddingHorizontal="@dimen/_10sdp"
+             android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+         android:padding="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/tvBold"
+            android:id="@+id/dataTxt"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:text="@string/games_data"
+            android:textColor="@color/text_hint_color"
+            android:textSize="@dimen/_10sdp" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:elevation="@dimen/_10sdp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_toEndOf="@+id/profileImage">
+
+                <LinearLayout
+                    android:id="@+id/phoneSec"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_group_427"/>
+
+                    <TextView
+                        style="@style/tvLight"
+                        android:text="@string/icon_first_text"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="@dimen/_30sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/theme_blue"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/websiteSec"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_group_428"/>
+
+                    <TextView
+                        style="@style/tvLight"
+                        android:text="@string/icon_second_text"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="@dimen/_30sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/theme_blue"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/navigationSec"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_group_429"/>
+
+                    <TextView
+                        style="@style/tvLight"
+                        android:text="@string/icon_third_text"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="@dimen/_30sdp"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/theme_blue"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvTitleTwo"
+                style="@style/tvBold"
+                android:includeFontPadding="false"
+                android:text="@string/fewWords"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvTitleTwo"
+                android:background="@color/light_grey" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/tvLight"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:textColor="@color/dark_color"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+android:id="@+id/descriptionText"
+            android:textSize="@dimen/_11sdp" />
+
+
+        <RelativeLayout
+            android:id="@+id/aminitiesSec"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvfacilities"
+                style="@style/tvBold"
+                android:includeFontPadding="false"
+                android:text="@string/club_facility"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:id="@+id/separatorTwo"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvfacilities"
+                android:background="@color/light_grey" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvClubFacility"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            tools:listitem="@layout/items_facility"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvOpenHour"
+                style="@style/tvBold"
+                android:includeFontPadding="false"
+                android:text="@string/openingHourdTitle"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:id="@+id/separatorThree"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvOpenHour"
+                android:background="@color/light_grey" />
+
+
+
+        </RelativeLayout>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleDaysTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                tools:listitem="@layout/items_days"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvEnterance"
+                style="@style/tvBold"
+                android:includeFontPadding="false"
+                android:text="@string/enteranceTitle"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvEnterance"
+                android:background="@color/light_grey" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/tvLight"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:textColor="@color/text_hint_color"
+            android:includeFontPadding="false"
+            android:visibility="gone"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:text="@string/about_card"
+            android:textSize="@dimen/_11sdp" />
+
+
+        <LinearLayout
+            android:id="@+id/buttonScore"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvResults"
+                style="@style/buttonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+                android:backgroundTint="@color/btn_clr_blue"
+                android:background="@drawable/blue_rect"
+                android:text="@string/club_pass"
+                android:layout_marginEnd="@dimen/_6sdp"
+                app:layout_constraintTop_toBottomOf="@+id/rbTerms" />
+
+            <ImageView
+                android:id="@+id/imgCard"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp"
+                android:backgroundTint="@color/btn_clr_blue"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:background="@drawable/blue_rect"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_18sdp">
+
+            <TextView
+                android:id="@+id/tvMap"
+                style="@style/tvBold"
+                android:includeFontPadding="false"
+                android:text="@string/mapTitle"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvMap"
+                android:background="@color/light_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:focusableInTouchMode="true">
+
+            <snow.app.padelbook.utils.CustomMapView
+                android:id="@+id/mapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+</layout>

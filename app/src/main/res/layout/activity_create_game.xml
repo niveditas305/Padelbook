@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:id="@+id/top"
+        android:elevation="@dimen/_2sdp"
+        android:background="@color/white">
+
+        <include android:id="@+id/toolbar_game"
+            layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/spinnerTwo"
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_game"
+             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="8.5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/rlIcons"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangular_box"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/spinnerDataTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    android:drawableTint="@color/dark_color"
+                    android:fontFamily="@font/reg"
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/nearby"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:id="@+id/rlIcons"
+                android:layout_weight="1.5"
+                android:gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/mapImage"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_y7thee_tif"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivList"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_list"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/spinnerThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTwo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="8.5"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:background="@drawable/rectangular_box"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/spinnerDataThree"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                    android:drawableTint="@color/dark_color"
+                    android:fontFamily="@font/reg"
+                    android:paddingEnd="@dimen/_5sdp"
+
+                    android:paddingVertical="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_8sdp"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/filterImg"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_filter_list_24" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/nested"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+
+            <fragment
+                android:id="@+id/mapFragment"
+                android:visibility="gone"
+                android:layout_above="@+id/viewLast"
+                android:layout_width="match_parent"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_height="match_parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleCreateGame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/items_search" />
+
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/viewLast"
+                android:layout_alignParentBottom="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="@dimen/_20sdp"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

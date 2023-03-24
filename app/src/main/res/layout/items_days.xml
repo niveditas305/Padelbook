@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDay"
+            style="@style/tvLight"
+            android:layout_width="@dimen/_90sdp"
+            android:text="@string/mon_lab"
+            android:includeFontPadding="false"
+            android:textColor="@color/dark_color"
+            android:textSize="@dimen/_11sdp"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            style="@style/tvLight"
+            android:text="@string/mon_time"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:textColor="@color/dark_color"
+            android:textSize="@dimen/_11sdp"/>
+
+
+</LinearLayout>

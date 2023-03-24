@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <include android:id="@+id/toolbarID"
+                layout="@layout/toolbar" />
+
+            <EditText
+                style="@style/etCustom"
+                android:id="@+id/etFirst"
+                android:hint="@string/heading"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:background="@drawable/rectangular_box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbarID"/>
+
+            <TextView
+                style="@style/tvBold"
+                android:id="@+id/tvToggle"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:layout_marginTop="28dp"
+                android:paddingBottom="@dimen/_16sdp"
+                android:textSize="@dimen/_11sdp"
+                android:text="@string/view_padelbook_contacts"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/butSwitch"
+                app:layout_constraintTop_toBottomOf="@+id/etFirst" />
+
+            <ToggleButton
+                android:id="@+id/butSwitch"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:background="@drawable/toggle_selector"
+                android:text=""
+                android:checked="false"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:textOff=""
+                android:textOn=""
+
+                app:layout_constraintTop_toBottomOf="@+id/etFirst"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <View
+                android:id="@+id/separator"
+                android:background="@color/light_grey"
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvToggle"
+                android:layout_height="@dimen/_1sdp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclePlayers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                tools:listitem="@layout/items_contacts"
+                android:layout_marginVertical="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

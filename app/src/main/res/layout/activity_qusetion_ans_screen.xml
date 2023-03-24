@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include android:id="@+id/toolBar"
+        layout="@layout/toolbar_icon"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/toolBar"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tvBold"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:text="@string/title" />
+
+                <View
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/light_grey" />
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/tvBold"
+                android:text="@string/headingText"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                style="@style/tvBold"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:background="@drawable/rect_border"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/description"
+                android:textColor="@color/text_hint_color"
+                android:textSize="@dimen/_11ssp" />
+
+
+            <LinearLayout
+                android:id="@+id/llParentTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp">
+
+                <RadioButton
+                    android:id="@+id/rbTextTwo"
+                    style="@style/radioButtoStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/beginner"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvDesTwo"
+                    style="@style/tvBold"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/beginner_des"
+
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp">
+
+                <RadioButton
+                    android:id="@+id/rbText"
+                    style="@style/radioButtoStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/intermediate"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvDes"
+                    style="@style/tvBold"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/beginner_des"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llParentThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp">
+
+                <RadioButton
+                    android:id="@+id/rbTextThree"
+                    style="@style/radioButtoStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/intermediate_high"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvDesThree"
+                    style="@style/tvBold"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/beginner_des"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llParentFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp">
+
+                <RadioButton
+                    android:id="@+id/rbTextFour"
+                    style="@style/radioButtoStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/advanced"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvDesFour"
+                    style="@style/tvBold"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/beginner_des"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llParentFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp">
+
+                <RadioButton
+                    android:id="@+id/rbTextFive"
+                    style="@style/radioButtoStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:fontFamily="@font/bold"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/master"
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <TextView
+                    android:id="@+id/tvDesFive"
+                    style="@style/tvBold"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="@string/beginner_des"
+
+                    android:textColor="@color/text_hint_color"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleQuestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/items_qustans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottom"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tvSubmit"
+            style="@style/buttonStyleTwo"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/round_corner_blue"
+            android:text="@string/quest_button_text" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

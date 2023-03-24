@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvWeek"
+        style="@style/tvBold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:text="Wed"
+        android:textColor="@color/dark_color_two"
+        android:textSize="@dimen/_10ssp" />
+
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/tvBold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/_3sdp"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:text="11"
+        android:textColor="@color/theme_blue"
+        android:textSize="@dimen/_14sdp" />
+
+    <TextView
+        android:id="@+id/tvMonthName"
+        style="@style/tvBold"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="@dimen/_12sdp"
+        android:text="Jan"
+        android:textColor="@color/dark_color_two"
+        android:textSize="@dimen/_8ssp" />
+</LinearLayout>

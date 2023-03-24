@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginScreen">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:background="@color/screens_bg"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:src="@drawable/ic_logo"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/ivLogo"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/EditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+                android:id="@+id/edEmail"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:layout_height="wrap_content"
+                android:hint="@string/email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:textColor="@color/theme_blue"
+                    android:singleLine="true"
+                    android:id="@+id/etEmail"
+                    android:textSize="@dimen/_10ssp"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="@style/AppTheme.InputLayoutStyle"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                app:layout_constraintTop_toBottomOf="@+id/edEmail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                style="@style/EditText.OutlinedBox"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:id="@+id/edPassword"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/_10ssp"
+                    android:singleLine="true"
+                    android:id="@+id/etPassword"
+                    android:textColor="@color/theme_blue"
+                    android:textAppearance="@style/AppTheme.InputLayoutStyle"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvLogin"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/round_corner_blue"
+                android:text="@string/login"
+                app:layout_constraintTop_toBottomOf="@+id/edPassword" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:id="@+id/llView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLogin">
+
+                <View
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_gravity="center"
+                    android:background="@color/theme_blue" />
+
+                <TextView
+                    style="@style/regTextview"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/theme_blue"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:text="@string/or" />
+
+                <View
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_gravity="center"
+                    android:background="@color/theme_blue" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFb"
+                style="@style/buttonStyle"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/round_corner_blue"
+                android:backgroundTint="@color/theme_blue"
+                android:text="@string/login_with_facebook"
+                app:layout_constraintTop_toBottomOf="@+id/llView" />
+
+
+            <TextView
+                android:id="@+id/tvForgetPass"
+               style="@style/tvReg"
+                android:text="@string/login_forgetpassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/theme_blue"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvFb"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

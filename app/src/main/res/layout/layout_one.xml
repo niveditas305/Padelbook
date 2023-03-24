@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:focusableInTouchMode="true"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_80sdp">
+
+        <ImageView
+            android:id="@+id/topImg"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_300sdp"
+            android:paddingLeft="-20dp"
+            android:src="@drawable/img_one"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rightImg"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginRight="-60dp"
+            android:src="@drawable/ic_circle_circle"
+            app:layout_constraintBottom_toBottomOf="@+id/topImg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topImg" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/tvReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/bold"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="@string/screen_one_title_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topImg" />
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            style="@style/tvReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/med"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:text="@string/screen_one_sub_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

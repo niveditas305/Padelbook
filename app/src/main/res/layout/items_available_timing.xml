@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_18sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/tvSixtySec"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/round_corner_blue"
+        android:paddingVertical="@dimen/_8sdp"
+        android:layout_gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_18sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSixty"
+            style="@style/tvBold"
+            android:textFontWeight="900"
+            android:lineSpacingExtra="@dimen/_2sdp"
+
+            android:textColor="@color/theme_blue"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_18sdp"/>
+
+        <TextView
+            android:id="@+id/tvsixtyprice"
+            style="@style/tvBold"
+            android:textFontWeight="600"
+            android:lineSpacingExtra="@dimen/_2sdp"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_9sdp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

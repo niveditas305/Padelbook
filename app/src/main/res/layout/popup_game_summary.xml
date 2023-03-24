@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_12sdp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/ic_line_phone_hand"/>
+
+
+        <TextView
+            android:id="@+id/tvTile"
+            style="@style/tvBold"
+            android:layout_width="wrap_content"
+            android:text="@string/game_heading"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/_2sdp"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:textSize="@dimen/_13sdp"/>
+
+
+        <TextView
+            android:id="@+id/tvDes"
+            style="@style/tvBold"
+            android:text="@string/game_description"
+            android:gravity="center_horizontal"
+            android:textColor="@color/text_hint_color"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:lineSpacingExtra="@dimen/_3sdp"
+            android:textSize="@dimen/_11ssp"/>
+
+        <TextView
+            android:id="@+id/popupSubmit"
+            style="@style/buttonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/round_corner_blue"
+            android:text="@string/game_button"
+            android:layout_marginVertical="@dimen/_18sdp"
+            android:layout_marginHorizontal="@dimen/_32sdp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

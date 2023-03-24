@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_15sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circularImg"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/mainViewClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_40sdp"/>
+
+    <TextView
+        style="@style/tvBold"
+        android:id="@+id/tvName"
+        android:text="@string/tvHeading"
+        android:textColor="@color/dark_color"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintStart_toEndOf="@+id/circularImg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/tvBold"
+        android:id="@+id/tvMobile"
+        android:text="@string/_30_6988555444"
+        android:textSize="@dimen/_8sdp"
+        android:textColor="@color/contact_clr"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@+id/circularImg"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"/>
+
+    <TextView
+        android:id="@+id/etFirst"
+        style="@style/customButton"
+        android:layout_width="@dimen/_90sdp"
+        android:background="@drawable/rectangular_box"
+        android:paddingVertical="@dimen/_5sdp"
+        android:singleLine="true"
+        android:text="Μέλος"
+        android:textColor="@color/contact_clr"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

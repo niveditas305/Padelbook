@@ -1,0 +1,50 @@
+package snow.app.padelbook.network.responses.forgototpverified
+
+import com.google.gson.annotations.SerializedName
+
+data class Data (
+
+  @SerializedName("id"                  ) var id                : Int?    = null,
+  @SerializedName("name"                ) var name              : String? = null,
+  @SerializedName("country_code"        ) var countryCode       : String? = null,
+  @SerializedName("country_code_symbol" ) var countryCodeSymbol : String? = null,
+  @SerializedName("category"            ) var category          : String? = null,
+  @SerializedName("phone"               ) var phone             : String? = null,
+  @SerializedName("image_file"          ) var imageFile         : String? = null,
+  @SerializedName("otp"                 ) var otp               : String? = null,
+  @SerializedName("email"               ) var email             : String? = null,
+  @SerializedName("gender"              ) var gender            : String? = null,
+  @SerializedName("device_type"         ) var deviceType        : String? = null,
+  @SerializedName("device_token"        ) var deviceToken       : String? = null,
+  @SerializedName("provider_id"         ) var providerId        : String? = null,
+  @SerializedName("provider_type"       ) var providerType      : String? = null,
+  @SerializedName("user_type"           ) var userType          : String? = null,
+  @SerializedName("role_id"             ) var roleId            : String? = null,
+  @SerializedName("created_by"          ) var createdBy         : String? = null,
+  @SerializedName("otp_verified"        ) var otpVerified       : String? = null,
+  @SerializedName("status"              ) var status            : String? = null,
+  @SerializedName("date_of_birth"       ) var dateOfBirth       : String? = null,
+  @SerializedName("is_terms"            ) var isTerms           : String? = null,
+  @SerializedName("quiz_type_id"        ) var quizTypeId        : String? = null,
+  @SerializedName("address"             ) var address           : String? = null,
+  @SerializedName("city"                ) var city              : String? = null,
+  @SerializedName("step_type"           ) var stepType          : String? = null,
+  @SerializedName("score"               ) var score             : String? = null,
+  @SerializedName("latitude"            ) var latitude          : String? = null,
+  @SerializedName("longitude"           ) var longitude         : String? = null,
+  @SerializedName("is_location"         ) var isLocation        : String? = null,
+  @SerializedName("check_password"      ) var checkPassword     : String? = null,
+  @SerializedName("language_type"       ) var languageType      : String? = null,
+  @SerializedName("is_email_verified"   ) var isEmailVerified   : String? = null,
+  @SerializedName("facebook_id"         ) var facebookId        : String? = null,
+  @SerializedName("apple_id"            ) var appleId           : String? = null,
+  @SerializedName("time_zone"           ) var timeZone          : String? = null,
+  @SerializedName("customer_id"         ) var customerId        : String? = null,
+  @SerializedName("first_login"         ) var firstLogin        : String? = null,
+  @SerializedName("club_id"             ) var clubId            : String? = null,
+  @SerializedName("otp_verified_forget" ) var otpVerifiedForget : Int?    = null,
+  @SerializedName("otp_api_response"    ) var otpApiResponse    : String? = null,
+  @SerializedName("created_at"          ) var createdAt         : String? = null,
+  @SerializedName("updated_at"          ) var updatedAt         : String? = null
+
+)

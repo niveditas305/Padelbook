@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/parenId"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                 android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    style="@style/tvBold"
+                    android:text="@string/padel_court_heading"
+                    android:layout_marginStart="@dimen/_10sdp"/>
+
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                     android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_height="@dimen/_1sdp"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/tvBold"
+                android:id="@+id/etSearchCourt"
+                android:background="@null"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/padel_courts"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <View
+                android:id="@+id/separator"
+                android:background="@color/light_grey"
+                android:layout_width="match_parent"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etSearchCourt"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <TextView
+                android:id="@+id/tvMatches"
+                style="@style/tvBold"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_16sdp"
+                android:text="@string/menu_four"
+                android:background="@null"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/text_hint_color"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:listitem="@layout/items_search_court_type"
+                app:layout_constraintTop_toBottomOf="@+id/tvMatches">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

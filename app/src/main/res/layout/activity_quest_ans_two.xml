@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include android:id="@+id/toolBar"
+        layout="@layout/toolbar_icon"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_above="@+id/tvSubmit"
+        android:layout_below="@+id/toolBar">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:orientation="vertical">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tvBold"
+                android:text="@string/title"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:paddingTop="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_16sdp"/>
+
+            <View
+                android:layout_gravity="center_vertical"
+                android:background="@color/light_grey"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_height="@dimen/_1sdp"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:listitem="@layout/items_ques_type_two"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+      </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tvSubmit"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/round_corner_blue"
+        android:text="Επόμενο"
+        android:visibility="gone"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
